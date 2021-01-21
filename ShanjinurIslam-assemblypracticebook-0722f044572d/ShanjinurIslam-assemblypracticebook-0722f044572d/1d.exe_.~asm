@@ -1,0 +1,26 @@
+.MODEL SMALL
+
+.CODE
+
+MAIN PROC
+MOV AX,0FH
+MOV BX,0F09H
+MOV CX,0FAFH
+
+CMP AX,BX
+JL THEN
+CMP BX,CX
+JL THEN
+MOV DX,1
+THEN:
+MOV DX,0
+MOV AH,4CH
+INT 21H
+
+MAIN ENDP
+
+END MAIN
+
+
+
+; [SOURCE]: C:\users\shanjinur\Desktop\Assembly\Practice Problem\assemblypracticebook\1d.asm

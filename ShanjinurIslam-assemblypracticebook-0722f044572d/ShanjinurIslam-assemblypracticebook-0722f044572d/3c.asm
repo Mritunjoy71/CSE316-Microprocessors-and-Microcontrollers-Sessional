@@ -1,0 +1,18 @@
+.MODEL SMALL
+
+.CODE
+
+MAIN PROC
+    MOV DX,1
+    MOV BX,2
+    TOP:
+    CMP BX,50
+    JG EXIT
+    ADD DX,4
+    INC BX
+    LOOP TOP
+    EXIT:
+         
+MAIN ENDP
+
+END MAIN 

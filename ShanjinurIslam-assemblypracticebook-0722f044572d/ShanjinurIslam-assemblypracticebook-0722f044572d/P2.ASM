@@ -1,0 +1,23 @@
+.MODEL SMALL
+
+.CODE
+
+MAIN PROC 
+    
+    MOV CL,'a'
+    CMP CL,'A'
+    JL END_CASE
+    CMP CL,'Z'
+    JLE CAP
+    JMP END_CASE
+    CAP:
+    MOV CL,1  
+    JMP END_IF
+    END_CASE:
+    MOV CL,0 
+    END_IF:
+    INT 21H
+
+MAIN ENDP
+
+END MAIN

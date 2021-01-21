@@ -1,0 +1,14 @@
+.MODEL SMALL
+
+.CODE 
+
+MAIN PROC
+    MOV AL,0
+    CMP AL,0
+    JL THEN:
+    MOV AH,0
+    THEN:
+    MOV AH,0FFH
+MAIN ENDP
+
+END MAIN 

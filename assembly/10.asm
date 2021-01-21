@@ -1,0 +1,16 @@
+.MODEL SMALL
+.DATA
+
+.CODE
+
+MAIN PROC  
+    MOV AX,70
+    MOV BX,80
+    ADD AX,BX
+    MOV CX,AX
+   
+    
+    
+    
+MAIN ENDP
+END MAIN

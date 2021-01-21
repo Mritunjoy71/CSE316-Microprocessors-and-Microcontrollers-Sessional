@@ -1,0 +1,13 @@
+.MODEL SMALL
+.DATA
+.CODE
+
+MAIN PROC
+    MOV BL,100
+    
+    MOV AH,2
+    MOV DL,BL
+    INT 21H
+    
+MAIN ENDP
+END MAIN    

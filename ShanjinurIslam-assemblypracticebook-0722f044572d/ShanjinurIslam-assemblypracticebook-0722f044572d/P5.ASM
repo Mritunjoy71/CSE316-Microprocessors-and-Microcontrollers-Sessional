@@ -1,0 +1,25 @@
+.MODEL SMALL
+
+.CODE
+
+MAIN PROC  
+    MOV AX,9
+    MOV BX,6
+    MOV CX,9
+    CMP AX,BX
+    JGE ELSE
+    MOV AX,0
+    JMP END_IF
+    ELSE:
+    CMP BX,CX
+    JL TWO
+    MOV CX,0
+    JMP END_IF
+    TWO:
+    MOV BX,0
+    JMP END_IF
+    END_IF:
+    
+MAIN ENDP
+
+END MAIN

@@ -1,0 +1,84 @@
+EMU8086 GENERATED LISTING. MACHINE CODE <- SOURCE.
+ 
+4a.exe_ -- emu8086 assembler version: 4.08  
+ 
+[ 4/15/2018  --  11:32:52 AM ] 
+ 
+===================================================================================================
+[LINE]     LOC: MACHINE CODE                          SOURCE
+===================================================================================================
+ 
+[   1]        :                                       .MODEL SMALL
+[   2]        :                                       
+[   3]        :                                       .CODE
+[   4]        :                                       
+[   5]    0000:                                       MAIN PROC
+[   6]    0000: BB 01 00                              MOV BX,1
+[   7]    0003: B4 01                                 MOV AH,1
+[   8]    0005:                                       TOP:
+[   9]    0005: 83 FB 05                              CMP BX,5
+[  10]    0008: 7F 05                                 JG END_L
+[  11]    000A: CD 21                                 INT 21H
+[  12]    000C: 43                                    INC BX
+[  13]    000D: E2 F6                                 LOOP TOP
+[  14]    000F:                                       END_L:
+[  15]    000F: B4 02                                 MOV AH,2
+[  16]    0011: B2 0D                                 MOV DL,0DH
+[  17]    0013: CD 21                                 INT 21H
+[  18]    0015: BB 01 00                              MOV BX,1
+[  19]        :                                       
+[  20]    0018:                                       BOT:
+[  21]    0018: 83 FB 05                              CMP BX,5
+[  22]    001B: 7F 07                                 JG END_LOOP
+[  23]    001D: B2 58                                 MOV DL,'X'
+[  24]    001F: CD 21                                 INT 21H
+[  25]    0021: 43                                    INC BX
+[  26]    0022: E2 F4                                 LOOP BOT
+[  27]    0024:                                       END_LOOP:
+[  28]        :                                       
+[  29]        :                                       
+[  30]        :                                       MAIN ENDP
+[  31]        :                                       
+[  32]        :                                       END MAIN
+[  33]        :                                       
+ 
+===================================================================================================
+ 
+EXE HEADER - bytes from 0000 to 01FF inclusive.
+
+0000: 4D      -   exe signature (M)
+0001: 5A      -   exe signature (Z)
+0002: 24      -   bytes on last page (l.byte)
+0003: 00      -   bytes on last page (h.byte)
+0004: 02      -   512 byte pages in file (l.byte)
+0005: 00      -   512 byte pages in file (h.byte)
+0006: 00      -   relocations (l.byte)
+0007: 00      -   relocations (h.byte)
+0008: 20      -   paragraphs in header (l.byte)
+0009: 00      -   paragraphs in header (h.byte)
+000A: 00      -   minimum memory (l.byte)
+000B: 00      -   minimum memory (h.byte)
+000C: FF      -   maximum memory (l.byte)
+000D: FF      -   maximum memory (h.byte)
+000E: 00      -   SS - stack segment (l.byte)
+000F: 00      -   SS - stack segment (h.byte)
+0010: 00      -   SP - stack pointer (l.byte)
+0011: 00      -   SP - stack pointer (h.byte)
+0012: F7      -   check sum (l.byte)
+0013: 3B      -   check sum (h.byte)
+0014: 00      -   IP - instruction pointer (l.byte)
+0015: 00      -   IP - instruction pointer (h.byte)
+0016: 00      -   CS - code segment (l.byte)
+0017: 00      -   CS - code segment (h.byte)
+0018: 1E      -   relocation table adress (l.byte)
+0019: 00      -   relocation table adress (h.byte)
+001A: 00      -   overlay number (l.byte)
+001B: 00      -   overlay number (h.byte)
+001C: 01      -   signature (l.byte)
+001D: 00      -   signature (h.byte)
+001E to 01FF  -   reserved relocation area  (00) 
+
+
+
+
+===================================================================================================
